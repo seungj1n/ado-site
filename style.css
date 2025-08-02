@@ -1,114 +1,128 @@
+
+/* 기본 설정 */
 body {
   margin: 0;
-  background-color: #0B0B0B;
-  color: #EDEDED;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  background-color: #111;
+  font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
+  color: #c0c0c0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 메인 로고를 화면 정중앙에 배치하기 위한 래퍼 */
+.main-center-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 텍스트 로고 */
+.text-logo {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 22px;
+  font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
+  color: #c0c0c0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* 슬로건 */
+.logo-caption {
+  font-size: 17px;
+  color: #aaa;
+  margin-top: 16px;
+  letter-spacing: 3px;
+  max-width: 460px;
   text-align: center;
 }
 
-header {
-  padding: 50px 0 20px 0;
-}
-
-header img {
-  width: 140px;
-}
-
-h1.logo-title {
-  font-size: 3rem;
-  letter-spacing: 1.5rem;
-  margin-bottom: 0;
-  color: #EDEDED;
-}
-
-h2.slogan {
-  margin-top: 0;
-  font-weight: 300;
-  font-size: 1.1rem;
-  color: #AAA;
-  letter-spacing: 2px;
-}
-
-nav {
-  margin: 20px 0;
-}
-
-nav a {
-  color: #ccc;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 0.95rem;
-}
-
-section {
-  padding: 60px 20px;
-}
-
-.about-wrapper {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 40px;
-  border: 1px solid #333;
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
-}
-
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1rem;
-  color: #ccc;
-  line-height: 1.7;
-}
-
-.sns-links {
+/* 텍스트 링크 버튼 */
+.nav-text-links {
+  text-align: center;
   margin-top: 40px;
+  font-size: 16px;
 }
 
-.sns-links a {
-  color: #AAAAAA;
+.nav-text-links a {
+  color: #c0c0c0;
   margin: 0 10px;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.sns-links a:hover {
-  color: #FFFFFF;
+.nav-text-links a:hover {
+  color: #ffffff;
 }
 
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  border-top: 1px solid #333;
-  font-size: 0.9rem;
-  color: #777;
-}
-@keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* 하단 고정 영역 */
+.footer-line {
+  height: 1px;
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+  bottom: 65px;
+  left: 0;
 }
 
-.logo-title {
-  animation: fadeDown 1.2s ease-out forwards;
-  opacity: 0;
+.sns-footer {
+  text-align: center;
+  padding: 20px 0 10px;
+  font-size: 14px;
+  background-color: #111;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-.slogan {
-  animation: fadeDown 1.4s ease-out forwards;
-  opacity: 0;
+.sns-footer a {
+  color: #aaa;
+  margin: 0 12px;
+  text-decoration: none;
 }
 
-nav {
-  animation: fadeDown 1.6s ease-out forwards;
-  opacity: 0;
+.sns-footer a:hover {
+  color: #fff;
+}
+
+.copy-info {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* 세부 페이지 콘텐츠 */
+.content {
+  max-width: 700px;
+  margin: 120px auto 160px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* 세부 페이지 로고 중앙 정렬 + 위에서 여백 */
+.subpage-logo {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 18px;
+  text-align: center;
+  display: block;
+  margin: 60px auto 20px;
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #c0c0c0;
+}
+
+.content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ccc;
 }
